@@ -20,6 +20,7 @@ import Pagination from './components/Pagination';
 import LnbAtomic from './components/LnbAtomic';
 import Lnb from './components/Lnb';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 
@@ -699,7 +700,10 @@ function App() {
         
       </div>
     </div>
-    </div>
+    
+    {/* 피그마 연동 Footer 컴포넌트 */}
+    <Footer />
+  </div>
   );
 }
 
