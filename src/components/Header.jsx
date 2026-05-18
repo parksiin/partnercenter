@@ -24,7 +24,7 @@ export default function Header({
       {/* Left Area: Logo & Service Title */}
       <div className="flex gap-3 items-end">
         <Logo />
-        <span className="text-text-primary text-body-s-b font-sans translate-y-[1px] leading-none">
+        <span className="text-text-primary text-label-s-b font-sans">
           파트너센터
         </span>
       </div>
