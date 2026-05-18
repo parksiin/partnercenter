@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import Logo from './Logo';
+import Profile from './Profile';
 import Icon from './Icon';
 
 export default function Header({
@@ -61,30 +62,14 @@ export default function Header({
 
           {/* Profile Dropdown Options */}
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-[200px] bg-surface-white border border-border-gray-light rounded-medium shadow-3 py-2 z-50 overflow-hidden animate-fadeIn">
-              <button
-                type="button"
-                onClick={() => {
-                  if (onMyPage) onMyPage();
-                  setIsDropdownOpen(false);
-                }}
-                className="flex w-full items-center gap-3 px-6 py-3 text-label-m-m text-text-basic hover:bg-surface-gray transition-colors text-left cursor-pointer"
-              >
-                <Icon name="service" size={16} className="text-icon-basic" />
-                마이페이지
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  if (onLogout) onLogout();
-                  setIsDropdownOpen(false);
-                }}
-                className="flex w-full items-center gap-3 px-6 py-3 text-label-m-m text-text-danger hover:bg-surface-gray transition-colors text-left cursor-pointer border-t border-border-gray-light"
-              >
-                <Icon name="delete" size={16} className="text-icon-danger" />
-                로그아웃
-              </button>
-            </div>
+            <Profile
+              username={username}
+              onLogout={() => {
+                if (onLogout) onLogout();
+                setIsDropdownOpen(false);
+              }}
+              className="absolute right-0 mt-2 z-50 animate-fadeIn"
+            />
           )}
         </div>
       </div>
