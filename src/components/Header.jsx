@@ -22,9 +22,9 @@ export default function Header({
       className
     )}>
       {/* Left Area: Logo & Service Title */}
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3 items-end">
         <Logo />
-        <span className="text-text-primary text-body-s-b font-sans leading-none pt-1">
+        <span className="text-text-primary text-body-s-b font-sans pb-[2px] leading-none">
           파트너센터
         </span>
       </div>
