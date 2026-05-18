@@ -21,7 +21,7 @@ export default function AccordionTrigger({
       type="button"
       onClick={onClick}
       className={classNames(
-        "flex items-center justify-center p-3 rounded-xsmall w-10 h-10 cursor-pointer select-none box-border outline-none border-none transition-colors duration-200",
+        "flex items-center justify-center p-3 rounded-xsmall w-40 h-40 cursor-pointer select-none box-border outline-none border-none transition-colors duration-200",
         stateBgClass,
         className
       )}
