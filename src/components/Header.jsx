@@ -22,7 +22,7 @@ export default function Header({
       className
     )}>
       {/* Left Area: Logo & Service Title */}
-      <div className="flex gap-3 items-end">
+      <div className="flex gap-3 items-end h-[56px] pb-6 box-border">
         <Logo />
         <span className="text-text-primary text-label-s-b font-sans">
           파트너센터
