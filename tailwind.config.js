@@ -4,7 +4,6 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
       fontFamily: {
         sans: ['var(--font-family-base)', 'sans-serif'],
       },
@@ -338,7 +337,6 @@ export default {
           white0: 'var(--color-alpha-white0)',
         }
       }
-    },
   },
   plugins: [],
 }

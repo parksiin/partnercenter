@@ -62,8 +62,8 @@ function App() {
   const totalPages = 20;
 
   return (
-    <div className="min-h-screen bg-background-gray p-10 font-sans flex flex-col items-center gap-10">
-      <div className="w-full max-w-4xl bg-surface-white p-8 rounded-large shadow-2 border border-border-gray-light">
+    <div className="min-h-[100vh] bg-background-gray p-10 font-sans flex flex-col items-center gap-10">
+      <div className="w-[100%] max-w-[896px] bg-surface-white p-8 rounded-large shadow-2 border border-border-gray-light">
         <h1 className="text-title-l font-bold text-text-bolder mb-8 border-b border-border-gray-light pb-4">
           🎨 피그마에서 꺼내온 컴포넌트 리뷰
         </h1>
@@ -133,7 +133,7 @@ function App() {
           <h2 className="text-title-m font-bold text-text-basic mb-4">Text Buttons (ButtonTxt)</h2>
           <div className="flex flex-col gap-6">
             <div className="flex flex-wrap items-end gap-5 border-b border-border-gray-light pb-4">
-              <h3 className="w-full text-label-s text-text-subtle">Primary</h3>
+              <h3 className="w-[100%] text-label-s text-text-subtle">Primary</h3>
               <ButtonTxt type="primary" size="large" label="Large" showLeftIcon />
               <ButtonTxt type="primary" size="medium" label="Medium" showRightIcon />
               <ButtonTxt type="primary" size="small" label="Small" />
@@ -141,7 +141,7 @@ function App() {
             </div>
             
             <div className="flex flex-wrap items-end gap-5 border-b border-border-gray-light pb-4">
-              <h3 className="w-full text-label-s text-text-subtle">Secondary</h3>
+              <h3 className="w-[100%] text-label-s text-text-subtle">Secondary</h3>
               <ButtonTxt type="secondary" size="large" label="Large" showLeftIcon />
               <ButtonTxt type="secondary" size="medium" label="Medium" showRightIcon />
               <ButtonTxt type="secondary" size="small" label="Small" />
@@ -149,7 +149,7 @@ function App() {
             </div>
 
             <div className="flex flex-wrap items-end gap-5 p-4 bg-background-inverted rounded-medium">
-              <h3 className="w-full text-label-s text-text-disabled-inverted">Inverted (어두운 배경용)</h3>
+              <h3 className="w-[100%] text-label-s text-text-disabled-inverted">Inverted (어두운 배경용)</h3>
               <ButtonTxt type="inverted" size="large" label="Large" showLeftIcon />
               <ButtonTxt type="inverted" size="medium" label="Medium" showRightIcon />
               <ButtonTxt type="inverted" size="small" label="Small" />
@@ -291,12 +291,12 @@ function App() {
         </div>
 
         {/* --- SelectExcel TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">SelectExcel (셀렉트 엑셀)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">SelectExcel (셀렉트 엑셀)</h2>
           
           <div className="grid grid-cols-2 gap-10 items-start">
             <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-lg mb-2">기본 동작 테스트</h3>
+              <h3 className="font-semibold text-title-m mb-2">기본 동작 테스트</h3>
               <SelectExcel 
                 placeholder="항목을 선택하세요" 
                 value={selectExcelValue}
@@ -310,14 +310,14 @@ function App() {
             </div>
             
             <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-lg mb-2">상태(States)</h3>
+              <h3 className="font-semibold text-title-m mb-2">상태(States)</h3>
               <SelectExcel state="focused" placeholder="focused option" />
               <SelectExcel state="error" alertText="값을 선택해야 합니다." placeholder="내용을 선택하세요" />
               <SelectExcel state="completed" value="선택 완료" placeholder="선택하세요" />
             </div>
             
             <div className="flex flex-col gap-4 col-span-2">
-              <h3 className="font-semibold text-lg mb-2">기타 (Disabled / View)</h3>
+              <h3 className="font-semibold text-title-m mb-2">기타 (Disabled / View)</h3>
               <div className="grid grid-cols-2 gap-10">
                 <SelectExcel state="disabled" placeholder="선택불가" />
                 <SelectExcel state="view" value="서울시 강남구" placeholder="선택불가" />
@@ -327,13 +327,13 @@ function App() {
         </div>
 
         {/* --- TabAtomic TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">TabAtomic (탭 최소단위 컴포넌트)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">TabAtomic (탭 최소단위 컴포넌트)</h2>
           
           <div className="flex flex-col gap-8">
             {/* Large TabAtomic */}
             <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-lg text-gray-700">Large Size (h-8)</h3>
+              <h3 className="font-semibold text-title-m text-text-basic">Large Size (h-8)</h3>
               <div className="flex flex-wrap items-center gap-4 border-b border-border-gray-light bg-surface-white pb-4 p-4">
                 <TabAtomic size="large" state="active" label="활성 상태" showBadge />
                 <TabAtomic size="large" state="default" label="기본 상태" showBadge />
@@ -345,7 +345,7 @@ function App() {
 
             {/* Medium TabAtomic */}
             <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-lg text-gray-700">Medium Size (h-7)</h3>
+              <h3 className="font-semibold text-title-m text-text-basic">Medium Size (h-7)</h3>
               <div className="flex flex-wrap items-center gap-4 bg-surface-white p-4">
                 <TabAtomic size="medium" state="active" label="활성 상태" showBadge />
                 <TabAtomic size="medium" state="default" label="기본 상태" showBadge />
@@ -358,12 +358,12 @@ function App() {
         </div>
 
         {/* --- Tab Group TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">Tab (탭 그룹 컨테이너 컴포넌트)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Tab (탭 그룹 컨테이너 컴포넌트)</h2>
           
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-lg text-gray-700">Large Size + rightElement</h3>
+              <h3 className="font-semibold text-title-m text-text-basic">Large Size + rightElement</h3>
               <div className="bg-surface-gray p-6 pt-0 rounded-md">
                 <Tab 
                   size="large" 
@@ -374,7 +374,7 @@ function App() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-lg text-gray-700">Medium Size (우측 요소 없음)</h3>
+              <h3 className="font-semibold text-title-m text-text-basic">Medium Size (우측 요소 없음)</h3>
               <div className="bg-surface-gray p-6 pt-0 rounded-md">
                 <Tab size="medium" tabs={dummyTabsInfo} />
               </div>
@@ -383,77 +383,77 @@ function App() {
         </div>
 
         {/* --- BadgeIcon TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">BadgeIcon (아이콘형 뱃지)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">BadgeIcon (아이콘형 뱃지)</h2>
           
           <div className="flex items-center gap-6">
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">pin 타입</span>
+              <span className="text-label-s font-semibold text-text-subtle">pin 타입</span>
               <BadgeIcon type="pin" />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">new 타입</span>
+              <span className="text-label-s font-semibold text-text-subtle">new 타입</span>
               <BadgeIcon type="new" />
             </div>
           </div>
         </div>
 
         {/* --- BadgeStatus TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">BadgeStatus (상태형 뱃지)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">BadgeStatus (상태형 뱃지)</h2>
           
           <div className="flex items-center gap-8">
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">pending (승인대기)</span>
+              <span className="text-label-s font-semibold text-text-subtle">pending (승인대기)</span>
               <BadgeStatus state="pending" />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">done (승인완료)</span>
+              <span className="text-label-s font-semibold text-text-subtle">done (승인완료)</span>
               <BadgeStatus state="done" />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">error (처리오류)</span>
+              <span className="text-label-s font-semibold text-text-subtle">error (처리오류)</span>
               <BadgeStatus state="error" />
             </div>
           </div>
         </div>
 
         {/* --- BadgeCount TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">BadgeCount (수량형 뱃지)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">BadgeCount (수량형 뱃지)</h2>
           
           <div className="flex items-center gap-8">
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">new (신규)</span>
+              <span className="text-label-s font-semibold text-text-subtle">new (신규)</span>
               <BadgeCount state="new" count={5} />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">cancel (종료)</span>
+              <span className="text-label-s font-semibold text-text-subtle">cancel (종료)</span>
               <BadgeCount state="cancel" count={12} />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm font-semibold text-gray-500">total (총)</span>
+              <span className="text-label-s font-semibold text-text-subtle">total (총)</span>
               <BadgeCount state="total" count={120} />
             </div>
           </div>
         </div>
 
         {/* --- Count TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">Count (카운트 컴포넌트)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Count (카운트 컴포넌트)</h2>
           
           <div className="flex flex-col gap-6">
             <div className="flex flex-wrap items-center gap-10">
               <div className="flex flex-col gap-2">
-                <span className="text-sm font-semibold text-gray-500">기본 (레이블 포함)</span>
+                <span className="text-label-s font-semibold text-text-subtle">기본 (레이블 포함)</span>
                 <Count label="신청 인원" value={150} />
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-sm font-semibold text-gray-500">레이블 미노출</span>
+                <span className="text-label-s font-semibold text-text-subtle">레이블 미노출</span>
                 <Count showLabel={false} value={24500} unit="원" />
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-sm font-semibold text-gray-500">단위 변경 (개)</span>
+                <span className="text-label-s font-semibold text-text-subtle">단위 변경 (개)</span>
                 <Count label="상품 수량" value={12} unit="개" />
               </div>
             </div>
@@ -461,12 +461,12 @@ function App() {
         </div>
 
         {/* --- Alert TEST --- */}
-        <div className="w-full max-w-4xl bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">Alert (알럿 컴포넌트)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Alert (알럿 컴포넌트)</h2>
           
           <div className="flex flex-wrap gap-10 bg-background-gray p-10 rounded-medium justify-center">
             <div className="flex flex-col gap-4 items-center">
-              <span className="text-sm font-semibold text-gray-500">btn1 타입 (단일 버튼)</span>
+              <span className="text-label-s font-semibold text-text-subtle">btn1 타입 (단일 버튼)</span>
               <Alert 
                 title="등록 완료" 
                 text="정보가 정상적으로 등록되었습니다." 
@@ -476,7 +476,7 @@ function App() {
             </div>
             
             <div className="flex flex-col gap-4 items-center">
-              <span className="text-sm font-semibold text-gray-500">btn2 타입 (이중 버튼)</span>
+              <span className="text-label-s font-semibold text-text-subtle">btn2 타입 (이중 버튼)</span>
               <Alert 
                 title="삭제하시겠습니까?" 
                 text="삭제된 데이터는 복구할 수 없습니다." 
@@ -491,8 +491,8 @@ function App() {
         </div>
 
         {/* --- Toast TEST --- */}
-        <div className="w-full max-w-4xl bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">Toast (토스트 컴포넌트)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Toast (토스트 컴포넌트)</h2>
           
           <div className="flex flex-col gap-6 items-center">
             <div className="flex gap-4">
@@ -510,12 +510,12 @@ function App() {
               />
             </div>
             
-            <p className="text-sm text-gray-500">
+            <p className="text-label-s text-text-subtle">
               * 일반 토스트는 4초 후 자동으로 사라집니다.<br/>
               * 되돌리기 토스트는 8초 후 사라지며, 마우스 호버 시 타이머가 멈춥니다.
             </p>
 
-            <div className="relative w-full h-24 bg-background-gray rounded-medium flex items-center justify-center">
+            <div className="relative w-[100%] h-24 bg-background-gray rounded-medium flex items-center justify-center">
               {toast.visible && (
                 <Toast 
                   message={toast.message} 
@@ -530,8 +530,8 @@ function App() {
         </div>
 
         {/* --- Pagination TEST --- */}
-        <div className="w-full max-w-4xl bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">Pagination (페이지네이션)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Pagination (페이지네이션)</h2>
           
           <div className="flex flex-col gap-10 items-center py-10">
             <div className="flex flex-col gap-4 items-center">
@@ -552,15 +552,15 @@ function App() {
               />
             </div>
 
-            <div className="p-4 bg-background-gray rounded-small text-body-s text-gray-500">
+            <div className="p-4 bg-background-gray rounded-small text-body-s text-text-subtle">
               현재 선택된 페이지: <span className="font-bold text-text-primary">{currentPage}</span> / {totalPages}
             </div>
           </div>
         </div>
 
         {/* --- LNB Atomic TEST --- */}
-        <div className="w-full max-w-4xl bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">LNB Atomic (LNB 메뉴 아이템)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">LNB Atomic (LNB 메뉴 아이템)</h2>
           
           <div className="grid grid-cols-4 gap-4 bg-background-gray p-6 rounded-medium">
             <div className="text-label-s text-text-gray-medium text-center self-center">TYPE / STATE</div>
@@ -601,8 +601,8 @@ function App() {
         </div>
 
         {/* --- LNB Layout TEST --- */}
-        <div className="w-full max-w-4xl bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">LNB (메가 메뉴 사이드바)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">LNB (메가 메뉴 사이드바)</h2>
           <p className="text-text-subtle">상단 패딩(pt-6, 16px) 변수가 적용된 통합 사이드바입니다. 메뉴를 클릭하여 상태 전환을 테스트해보세요.</p>
           
           <div className="flex gap-10 bg-background-gray p-6 rounded-medium min-h-[500px]">
@@ -616,27 +616,27 @@ function App() {
             {/* 콘텐츠 영역 더미 */}
             <div className="flex-1 bg-surface-white rounded-small p-8 flex flex-col gap-4">
               <h3 className="text-title-m-b">현재 활성화된 메뉴: {lnbActiveType}</h3>
-              <div className="w-full h-4 bg-background-gray rounded-max" />
-              <div className="w-3/4 h-4 bg-background-gray rounded-max" />
-              <div className="w-1/2 h-4 bg-background-gray rounded-max" />
+              <div className="w-[100%] h-4 bg-background-gray rounded-max" />
+              <div className="w-[75%] h-4 bg-background-gray rounded-max" />
+              <div className="w-[50%] h-4 bg-background-gray rounded-max" />
             </div>
           </div>
         </div>
 
         {/* --- Checkbox TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">Checkbox (체크박스)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Checkbox (체크박스)</h2>
           
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-10">
               <div className="flex flex-col gap-3">
-                <span className="text-sm font-semibold text-gray-400">기본 상태</span>
+                <span className="text-label-s font-semibold text-text-disabled">기본 상태</span>
                 <Checkbox label="미체크" checked={check1} onChange={setCheck1} />
                 <Checkbox label="체크됨" checked={check2} onChange={setCheck2} />
               </div>
               
               <div className="flex flex-col gap-3">
-                <span className="text-sm font-semibold text-gray-400">비활성화 상태</span>
+                <span className="text-label-s font-semibold text-text-disabled">비활성화 상태</span>
                 <Checkbox label="비활성 미체크" checked={false} disabled />
                 <Checkbox label="비활성 체크됨" checked={true} disabled />
               </div>
@@ -645,8 +645,8 @@ function App() {
         </div>
 
         {/* --- Modal TEST --- */}
-        <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold border-b pb-4">Modal (모달 컴포넌트)</h2>
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Modal (모달 컴포넌트)</h2>
           
           <div className="flex flex-wrap gap-4">
             <Button label="1컬럼 모달 열기" onClick={() => openModal('1column')} />
