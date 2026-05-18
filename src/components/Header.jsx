@@ -18,7 +18,7 @@ export default function Header({
 
   return (
     <header className={classNames(
-      'bg-surface-gray shadow-1 flex h-9 w-[100%] items-center justify-between px-9 py-2 relative z-50 select-none box-border',
+      'bg-surface-gray shadow-1 flex h-9 w-[100%] items-start justify-between px-9 py-1 relative z-50 select-none box-border',
       className
     )}>
       {/* Left Area: Logo & Service Title */}
@@ -30,7 +30,7 @@ export default function Header({
       </div>
 
       {/* Right Area: Session Timer & User Profile */}
-      <div className="flex gap-5 h-full items-center">
+      <div className="flex gap-5 h-[56px] items-center">
         {/* Session Time Tracker */}
         <div className="flex gap-3 h-[40px] items-center px-6 py-3 rounded-max bg-transparent">
           <Icon name="time" size={20} className="text-icon-basic" />
