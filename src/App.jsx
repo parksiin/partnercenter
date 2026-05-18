@@ -19,6 +19,7 @@ import Toast from './components/Toast';
 import Pagination from './components/Pagination';
 import LnbAtomic from './components/LnbAtomic';
 import Lnb from './components/Lnb';
+import Header from './components/Header';
 
 
 
@@ -62,8 +63,18 @@ function App() {
   const totalPages = 20;
 
   return (
-    <div className="min-h-[100vh] bg-background-gray p-10 font-sans flex flex-col items-center gap-10">
-      <div className="w-[100%] max-w-[896px] bg-surface-white p-8 rounded-large shadow-2 border border-border-gray-light">
+    <div className="min-h-[100vh] flex flex-col bg-background-gray">
+      {/* 피그마 연동 Header 컴포넌트 */}
+      <Header 
+        username="김다솜" 
+        sessionTime="00:59:57" 
+        onLogout={() => alert('로그아웃 되었습니다.')}
+        onMyPage={() => alert('마이페이지로 이동합니다.')}
+      />
+      
+      {/* 메인 데모 영역 */}
+      <div className="p-10 font-sans flex flex-col items-center gap-10 flex-1">
+        <div className="w-[100%] max-w-[896px] bg-surface-white p-8 rounded-large shadow-2 border border-border-gray-light">
         <h1 className="text-title-l font-bold text-text-bolder mb-8 border-b border-border-gray-light pb-4">
           🎨 피그마에서 꺼내온 컴포넌트 리뷰
         </h1>
@@ -687,6 +698,7 @@ function App() {
         </div>
         
       </div>
+    </div>
     </div>
   );
 }
