@@ -12,6 +12,7 @@ import BadgeIcon from './components/BadgeIcon';
 import BadgeStatus from './components/BadgeStatus';
 import BadgeCount from './components/BadgeCount';
 import Checkbox from './components/Checkbox';
+import AccordionTrigger from './components/AccordionTrigger';
 import Modal from './components/Modal';
 import Count from './components/Count';
 import Alert from './components/Alert';
@@ -41,6 +42,7 @@ function App() {
   const [selectExcelValue, setSelectExcelValue] = useState('');
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(true);
+  const [accordionOpen, setAccordionOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState('1column');
 
@@ -651,6 +653,69 @@ function App() {
                 <span className="text-label-s font-semibold text-text-disabled">비활성화 상태</span>
                 <Checkbox label="비활성 미체크" checked={false} disabled />
                 <Checkbox label="비활성 체크됨" checked={true} disabled />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* --- AccordionTrigger TEST --- */}
+        <div className="w-[100%] max-w-[896px] bg-surface-white rounded-lg shadow-sm p-8 flex flex-col gap-8">
+          <h2 className="text-title-l font-bold border-b pb-4">Accordion Trigger (아코디언 트리거)</h2>
+          
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-3">
+              <span className="text-label-s font-semibold text-text-disabled">상호작용 가능한 데모 (클릭해 보세요!)</span>
+              <div className="flex items-center gap-4">
+                <AccordionTrigger 
+                  type={accordionOpen ? 'open' : 'close'} 
+                  onClick={() => setAccordionOpen(!accordionOpen)} 
+                />
+                <span className="text-label-m-m text-text-basic">
+                  {accordionOpen ? '열림 상태 (Chevron Down)' : '닫힘 상태 (Chevron Up)'}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <span className="text-label-s font-semibold text-text-disabled">피그마 공식 6가지 상태 명세</span>
+              <div className="grid grid-cols-2 gap-6 bg-surface-gray p-6 rounded-medium border border-border-gray-light max-w-[440px]">
+                {/* Close type: chevron up */}
+                <div className="flex flex-col gap-3 items-center">
+                  <span className="text-body-s-m text-text-subtle">Close Type (Chevron Up)</span>
+                  <div className="flex gap-4 items-center">
+                    <div className="flex flex-col items-center gap-1">
+                      <AccordionTrigger type="close" state="default" />
+                      <span className="text-caption text-text-disabled">Default</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <AccordionTrigger type="close" state="hover" />
+                      <span className="text-caption text-text-disabled">Hover</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <AccordionTrigger type="close" state="pressed" />
+                      <span className="text-caption text-text-disabled">Pressed</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Open type: chevron down */}
+                <div className="flex flex-col gap-3 items-center">
+                  <span className="text-body-s-m text-text-subtle">Open Type (Chevron Down)</span>
+                  <div className="flex gap-4 items-center">
+                    <div className="flex flex-col items-center gap-1">
+                      <AccordionTrigger type="open" state="default" />
+                      <span className="text-caption text-text-disabled">Default</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <AccordionTrigger type="open" state="hover" />
+                      <span className="text-caption text-text-disabled">Hover</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <AccordionTrigger type="open" state="pressed" />
+                      <span className="text-caption text-text-disabled">Pressed</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
